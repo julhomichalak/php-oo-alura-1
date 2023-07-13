@@ -6,10 +6,9 @@ use Alura\Banco\Modelo\Pessoa;
 use Alura\Banco\Modelo\CPF;
 use Alura\Banco\Modelo\Endereco;
 
-
 class Titular extends Pessoa
 {
-    private Endereco $endereco;
+    private $endereco;
 
     public function __construct(CPF $cpf, string $nome, Endereco $endereco)
     {
@@ -17,7 +16,7 @@ class Titular extends Pessoa
         $this->endereco = $endereco;
     }
 
-    public function recuperEndereco(): Endereco
+    public function recuperaEndereco(): Endereco
     {
         return $this->endereco;
     }
